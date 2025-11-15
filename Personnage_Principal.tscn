@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://btabe33riipvu"]
+[gd_scene load_steps=4 format=3 uid="uid://btabe33riipvu"]
+
+[ext_resource type="PackedScene" uid="uid://eau6u1rlmhbq" path="res://bras.tscn" id="1_u3vc1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_slop0"]
 height = 1.9535
@@ -13,3 +15,9 @@ shape = SubResource("CapsuleShape3D_slop0")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.959618, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_14bjk")
+
+[node name="Node3D" parent="." instance=ExtResource("1_u3vc1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.572836, 0, 0)
+
+[node name="Node3D2" parent="." instance=ExtResource("1_u3vc1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.581299, 0, 0)
