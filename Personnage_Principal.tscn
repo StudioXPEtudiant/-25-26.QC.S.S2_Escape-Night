@@ -1,3 +1,53 @@
-[gd_scene format=3 uid="uid://btabe33riipvu"]
+[gd_scene load_steps=8 format=3 uid="uid://btabe33riipvu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a1s2"]
+albedo_color = Color(0.560955, 0.560955, 0.560955, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e456h"]
+material = SubResource("StandardMaterial3D_1a1s2")
+size = Vector3(250, 2.5, 400)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igw0p"]
+albedo_color = Color(0.560784, 0.560784, 0.560784, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hn602"]
+material = SubResource("StandardMaterial3D_igw0p")
+size = Vector3(125, 2.5, 200)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dj221"]
+albedo_color = Color(0.560784, 0.560784, 0.560784, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydddm"]
+albedo_color = Color(0.560784, 0.560784, 0.560784, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ydyjn"]
+material = SubResource("StandardMaterial3D_ydddm")
+size = Vector3(125, 2.5, 84.335)
 
 [node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.921, 0, 0.018)
+use_collision = true
+size = Vector3(250, 2, 400)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CSGBox3D"]
+mesh = SubResource("BoxMesh_e456h")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -175.055, 0, 99.679)
+use_collision = true
+size = Vector3(125, 2, 200)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CSGBox3D2"]
+mesh = SubResource("BoxMesh_hn602")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.088, 0, -240.43)
+use_collision = true
+size = Vector3(125, 2, 84.335)
+material = SubResource("StandardMaterial3D_dj221")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CSGBox3D3"]
+transform = Transform3D(0.998378, 0, 0, 0, 0.998378, 0, 0, 0, -1.09271, 0, 0, 0)
+mesh = SubResource("BoxMesh_ydyjn")
