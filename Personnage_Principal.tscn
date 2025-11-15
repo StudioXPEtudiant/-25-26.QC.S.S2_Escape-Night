@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://btabe33riipvu"]
+[gd_scene load_steps=5 format=3 uid="uid://btabe33riipvu"]
 
+[ext_resource type="Script" path="res://personnage_principal.gd" id="1_4retq"]
 [ext_resource type="PackedScene" uid="uid://eau6u1rlmhbq" path="res://bras.tscn" id="1_u3vc1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_slop0"]
@@ -8,6 +9,7 @@ height = 1.9535
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_14bjk"]
 
 [node name="PP" type="CharacterBody3D"]
+script = ExtResource("1_4retq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_slop0")
