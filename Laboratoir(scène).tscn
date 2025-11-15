@@ -12,3 +12,6 @@ mesh = SubResource("BoxMesh_42fxk")
 
 [node name="PP" parent="." instance=ExtResource("1_r2qb0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85209, 1.42685, 0.700266)
+
+[node name="Node3D" parent="." instance=ExtResource("1_r2qb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2434, 33.4266, 35.5069)
