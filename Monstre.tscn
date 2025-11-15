@@ -1,5 +1,19 @@
-[gd_scene format=3 uid="uid://dnwhrjxakhhu6"]
+[gd_scene load_steps=3 format=3 uid="uid://dnwhrjxakhhu6"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nexf3"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5s4e0"]
 
 [node name="Node3D" type="CharacterBody3D"]
 
+[node name="Bras_Gauche" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.378552, 0, 0, 0, 0.735065, 0.183817, 0, -0.408074, 0.33111, 0.972726, 0.518773, 0.850969)
+mesh = SubResource("CapsuleMesh_nexf3")
+
+[node name="Bras_Droit" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.378552, 0, 0, 0, 0.735065, 0.183817, 0, -0.408074, 0.33111, -0.814927, 0.518773, 0.998322)
+mesh = SubResource("CapsuleMesh_nexf3")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.45089, 0, 0, 0, 0.884606, -1.01077, 0, 1.17498, 0.76098, 0, 0.628394, 0)
+mesh = SubResource("CapsuleMesh_5s4e0")
