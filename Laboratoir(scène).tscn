@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://t0oepghs0plp"]
+
+[ext_resource type="PackedScene" uid="uid://btabe33riipvu" path="res://Personnage_Principal.tscn" id="1_r2qb0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_42fxk"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(67.716, 0, 0, 0, 0.582675, 0, 0, 0, 46.74, 0, 0, 0)
+mesh = SubResource("BoxMesh_42fxk")
+
+[node name="PP" parent="." instance=ExtResource("1_r2qb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85209, 1.42685, 0.700266)
