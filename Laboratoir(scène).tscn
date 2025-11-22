@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://t0oepghs0plp"]
+[gd_scene load_steps=10 format=3 uid="uid://t0oepghs0plp"]
 
 [ext_resource type="PackedScene" uid="uid://dnwhrjxakhhu6" path="res://Monstre.tscn" id="1_dxf6b"]
 
@@ -25,6 +25,8 @@ albedo_color = Color(0.560784, 0.560784, 0.560784, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_ydyjn"]
 material = SubResource("StandardMaterial3D_ydddm")
 size = Vector3(125, 2.5, 84.335)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_w4cp3"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -58,4 +60,8 @@ mesh = SubResource("BoxMesh_ydyjn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
 [node name="Node3D" parent="." instance=ExtResource("1_dxf6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42297, 1, 0.940201)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.541625, 2.59412, -2.36311)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0782, 1.55244, -2.34595)
+mesh = SubResource("CapsuleMesh_w4cp3")
