@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://yyyno8101x5o"]
+
+[ext_resource type="PackedScene" uid="uid://16fiqwvuvn1o" path="res://ARMS.obj" id="1_p1g2a"]
+
+[node name="Arms" instance=ExtResource("1_p1g2a")]
