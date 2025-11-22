@@ -7,13 +7,13 @@
 [node name="Node3D" type="CharacterBody3D"]
 
 [node name="Bras_Gauche" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.378552, 0, 0, 0, 0.735065, 0.183817, 0, -0.408074, 0.33111, 0.972726, 0.518773, 0.850969)
+transform = Transform3D(0.378552, 0, 0, 0, 0.735065, 0.183817, 0, -0.408074, 0.33111, 0.522081, 0.518773, 0.850969)
 mesh = SubResource("CapsuleMesh_nexf3")
 
 [node name="Bras_Droit" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.378552, 0, 0, 0, 0.735065, 0.183817, 0, -0.408074, 0.33111, -0.814927, 0.518773, 0.998322)
+transform = Transform3D(0.378552, 0, 0, 0, 0.735065, 0.183817, 0, -0.408074, 0.33111, -0.435056, 0.518773, 1.00476)
 mesh = SubResource("CapsuleMesh_nexf3")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.45089, 0, 0, 0, 0.884606, -1.01077, 0, 1.17498, 0.76098, 0, 0.628394, 0)
+[node name="Corp" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.676634, 0, 0, 0, 0.634839, -0.200504, 0, 0.843226, 0.150953, 0, 0.628394, 0)
 mesh = SubResource("CapsuleMesh_5s4e0")
