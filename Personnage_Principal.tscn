@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://btabe33riipvu"]
+[gd_scene load_steps=3 format=3 uid="uid://btabe33riipvu"]
 
-[node name="PP" type="Node3D"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wuju4"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lfqsh"]
+
+[node name="PP" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.35585, -0.00850624, -0.00453639)
+shape = SubResource("CapsuleShape3D_wuju4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.360694, -0.0216934, 0)
+mesh = SubResource("CapsuleMesh_lfqsh")
