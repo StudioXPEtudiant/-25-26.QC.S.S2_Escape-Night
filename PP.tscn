@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://personnage_principal.gd" id="1_jhnc7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qgq2l"]
-size = Vector3(1, 0.241699, 0.552734)
+size = Vector3(1, 1.39124, 0.552734)
 
 [node name="Node3D" type="CharacterBody3D"]
 script = ExtResource("1_jhnc7")
@@ -12,5 +12,5 @@ script = ExtResource("1_jhnc7")
 [node name="Arms" parent="." instance=ExtResource("1_f6i2h")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0734863, 0.223633)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.501282, 0.223633)
 shape = SubResource("BoxShape3D_qgq2l")
