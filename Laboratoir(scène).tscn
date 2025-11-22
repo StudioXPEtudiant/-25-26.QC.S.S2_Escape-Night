@@ -1,4 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://t0oepghs0plp"]
+[gd_scene load_steps=9 format=3 uid="uid://t0oepghs0plp"]
+
+[ext_resource type="PackedScene" uid="uid://btabe33riipvu" path="res://Personnage_Principal.tscn" id="1_u24pj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a1s2"]
 albedo_color = Color(0.560955, 0.560955, 0.560955, 1)
@@ -51,3 +53,9 @@ material = SubResource("StandardMaterial3D_dj221")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CSGBox3D3"]
 transform = Transform3D(0.998378, 0, 0, 0, 0.998378, 0, 0, 0, -1.09271, 0, 0, 0)
 mesh = SubResource("BoxMesh_ydyjn")
+
+[node name="PP" parent="." instance=ExtResource("1_u24pj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
