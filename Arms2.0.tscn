@@ -3,3 +3,4 @@
 [ext_resource type="PackedScene" uid="uid://16fiqwvuvn1o" path="res://ARMS.obj" id="1_p1g2a"]
 
 [node name="Arms" instance=ExtResource("1_p1g2a")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
