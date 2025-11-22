@@ -1,4 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://t0oepghs0plp"]
+[gd_scene load_steps=9 format=3 uid="uid://t0oepghs0plp"]
+
+[ext_resource type="PackedScene" uid="uid://dnwhrjxakhhu6" path="res://Monstre.tscn" id="1_dxf6b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a1s2"]
 albedo_color = Color(0.560955, 0.560955, 0.560955, 1)
@@ -54,3 +56,6 @@ mesh = SubResource("BoxMesh_ydyjn")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Node3D" parent="." instance=ExtResource("1_dxf6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42297, 1, 0.940201)

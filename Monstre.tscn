@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnwhrjxakhhu6"]
+[gd_scene load_steps=5 format=3 uid="uid://dnwhrjxakhhu6"]
+
+[ext_resource type="Script" path="res://personnage_principal.gd" id="1_2f8ik"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_nexf3"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_5s4e0"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ialkv"]
+
 [node name="Node3D" type="CharacterBody3D"]
+script = ExtResource("1_2f8ik")
 
 [node name="Bras_Gauche" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.378552, 0, 0, 0, 0.735065, 0.183817, 0, -0.408074, 0.33111, 0.522081, 0.518773, 0.850969)
@@ -17,3 +22,7 @@ mesh = SubResource("CapsuleMesh_nexf3")
 [node name="Corp" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.676634, 0, 0, 0, 0.634839, -0.200504, 0, 0.843226, 0.150953, 0, 0.628394, 0)
 mesh = SubResource("CapsuleMesh_5s4e0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 2.9, 0, 0, 0)
+shape = SubResource("BoxShape3D_ialkv")
