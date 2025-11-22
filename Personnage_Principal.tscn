@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://btabe33riipvu"]
+[gd_scene load_steps=4 format=3 uid="uid://btabe33riipvu"]
+
+[ext_resource type="Script" path="res://personnage_principal.gd" id="1_i2iqd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wuju4"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lfqsh"]
 
 [node name="PP" type="CharacterBody3D"]
+script = ExtResource("1_i2iqd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.35585, -0.00850624, -0.00453639)
