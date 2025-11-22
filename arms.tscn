@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://butcfkbdl3dfj"]
+[gd_scene load_steps=2 format=3 uid="uid://butcfkbdl3dfj"]
+
+[ext_resource type="PackedScene" uid="uid://16fiqwvuvn1o" path="res://ARMS.obj" id="1_xmgbd"]
 
 [node name="ARMS" type="Node3D"]
+
+[node name="Arms" parent="." instance=ExtResource("1_xmgbd")]
