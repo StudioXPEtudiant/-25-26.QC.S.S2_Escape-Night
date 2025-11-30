@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://t0oepghs0plp"]
+[gd_scene load_steps=10 format=3 uid="uid://t0oepghs0plp"]
 
 [ext_resource type="PackedScene" uid="uid://dnwhrjxakhhu6" path="res://Monstre.tscn" id="1_dxf6b"]
-[ext_resource type="PackedScene" uid="uid://d3xtxq5o1pqj8" path="res://PP.tscn" id="2_t1dvr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a1s2"]
 albedo_color = Color(0.560955, 0.560955, 0.560955, 1)
@@ -66,6 +65,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.541625, 2.59412, -2.36311)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0782, 1.55244, -2.34595)
 mesh = SubResource("CapsuleMesh_w4cp3")
-
-[node name="Node3D2" parent="." instance=ExtResource("2_t1dvr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.408375, 3.45829, -3.10765)
