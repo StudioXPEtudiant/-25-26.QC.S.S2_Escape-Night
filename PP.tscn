@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3xtxq5o1pqj8"]
+
+[ext_resource type="PackedScene" uid="uid://yyyno8101x5o" path="res://Arms2.0.tscn" id="1_f6i2h"]
+[ext_resource type="Script" path="res://personnage_principal.gd" id="1_jhnc7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qgq2l"]
+size = Vector3(1, 1.39124, 0.552734)
+
+[node name="Node3D" type="CharacterBody3D"]
+script = ExtResource("1_jhnc7")
+
+[node name="Arms" parent="." instance=ExtResource("1_f6i2h")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.501282, 0.223633)
+shape = SubResource("BoxShape3D_qgq2l")
