@@ -8,6 +8,9 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_vb2yd"]
 size = Vector3(1.82275, 5.24213, 5.12207)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vb2yd"]
+size = Vector3(1.82275, 5.24213, 5.12207)
+
 [node name="Arms" instance=ExtResource("1_p1g2a")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
@@ -24,12 +27,20 @@ modifier_callback_mode_process = 0
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.06104, -0.327057, -0.31467)
 shape = SubResource("BoxShape3D_vb2yd")
 
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Cube_002" index="0"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.06104, -0.327057, -0.31467)
+shape = SubResource("BoxShape3D_vb2yd")
+
 [node name="Cube_001" parent="." index="1"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0, -2)
 skin = SubResource("Skin_af6kq")
 skeleton = NodePath("Skeleton3D")
 
 [node name="Skeleton3D" type="Skeleton3D" parent="Cube_001" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_001" index="0"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.06104, 0.113953, -0.22399)
+shape = SubResource("BoxShape3D_vb2yd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_001" index="0"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.06104, 0.113953, -0.22399)
