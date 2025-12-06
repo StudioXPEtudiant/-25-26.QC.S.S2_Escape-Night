@@ -17,6 +17,7 @@ material = SubResource("StandardMaterial3D_xd3g8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_avx5g"]
 albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hjstv"]
 material = SubResource("StandardMaterial3D_avx5g")
@@ -53,3 +54,6 @@ mesh = SubResource("CapsuleMesh_hjstv")
 [node name="Oeil2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.324149, -0.946006, 0, 0.946006, -0.324149, 0.490983, 1.43887, 0.907537)
 mesh = SubResource("CapsuleMesh_hjstv")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0257462, 1.44666, 1.45596)
