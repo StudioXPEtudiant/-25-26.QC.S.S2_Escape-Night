@@ -33,6 +33,7 @@ albedo_color = Color(1, 0, 1, 1)
 material = SubResource("StandardMaterial3D_t4cqt")
 
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0173149, 0)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.921, 0, 0.018)
@@ -64,7 +65,7 @@ mesh = SubResource("BoxMesh_ydyjn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47439, 2.59412, -6.99341)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0782, 1.55244, -2.34595)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0782, 1.85946, -2.34595)
 mesh = SubResource("CapsuleMesh_w4cp3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

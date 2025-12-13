@@ -25,6 +25,7 @@ radius = 0.125
 height = 0.5
 
 [node name="Node3D" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0421104)
 script = ExtResource("1_2f8ik")
 
 [node name="Bras_Gauche" type="MeshInstance3D" parent="."]
