@@ -35,3 +35,4 @@ func _input(event):
 	var mouse_delta = event.relative
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * 0.1)
+		rotate_x(-event.relative.y * 0.1)
