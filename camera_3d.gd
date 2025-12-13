@@ -10,5 +10,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("mouvement Droite cam"):
 		angle_cam + PI / 4
-		pass
+	
+	
+	if Input.is_action_pressed("mouvement gauche cam"):
+		angle_cam + PI / 4
 	

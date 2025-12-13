@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://gf8yowy5duun"]
+[gd_scene load_steps=5 format=3 uid="uid://gf8yowy5duun"]
 
 [ext_resource type="Script" path="res://personnage_principal.gd" id="1_rp3qt"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="2_jswb2"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_odvco"]
 
@@ -12,6 +13,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.813962, 0)
 script = ExtResource("1_rp3qt")
 
 [node name="Camera3D" type="Camera3D" parent="."]
+script = ExtResource("2_jswb2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.247799, 0, 0, 0, 0.0184483, -0.255721, 0, 0.29653, 0.0159094, 0.316715, 0, -0.322373)
