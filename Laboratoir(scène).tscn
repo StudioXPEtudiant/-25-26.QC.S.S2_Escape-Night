@@ -56,12 +56,13 @@ material = SubResource("StandardMaterial3D_dj221")
 transform = Transform3D(0.998378, 0, 0, 0, 0.998378, 0, 0, 0, -1.09271, 0, 0, 0)
 mesh = SubResource("BoxMesh_ydyjn")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-
 [node name="Node3D" parent="." instance=ExtResource("1_dxf6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.541625, 2.59412, -2.36311)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0782, 1.55244, -2.34595)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.1, 2.1, -2.35)
 mesh = SubResource("CapsuleMesh_w4cp3")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.3, 3, -4.97327)
+fov = 80.0
