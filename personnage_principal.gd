@@ -13,20 +13,11 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_pressed("Saut") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-	
-	#Sprint
 	if Input.is_action_pressed("Sprint"):
 		SPEED = 10.0
 	else:
 		SPEED = 5.0
 	
-	#Acroupir
-	if Input.is_action_pressed("Acroupir"):
-		pass
-	
-	#dash
-	if Input.is_action_pressed("Sprint") and ("Acroupir"):
-		pass
 	
 	var input_dir := Input.get_vector("Gauche", "Droite", "Avance", "Recule")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
