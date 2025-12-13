@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnwhrjxakhhu6"]
+[gd_scene load_steps=9 format=3 uid="uid://dnwhrjxakhhu6"]
 
 [ext_resource type="Script" path="res://personnage_principal.gd" id="1_2f8ik"]
 
@@ -7,6 +7,22 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_5s4e0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ialkv"]
+size = Vector3(0.741211, 1.09906, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xd3g8"]
+albedo_color = Color(0.49733, 0, 0.16561, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_y3cni"]
+material = SubResource("StandardMaterial3D_xd3g8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_avx5g"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hjstv"]
+material = SubResource("StandardMaterial3D_avx5g")
+radius = 0.125
+height = 0.5
 
 [node name="Node3D" type="CharacterBody3D"]
 script = ExtResource("1_2f8ik")
@@ -20,9 +36,24 @@ transform = Transform3D(0.378552, 0, 0, 0, 0.735065, 0.183817, 0, -0.408074, 0.3
 mesh = SubResource("CapsuleMesh_nexf3")
 
 [node name="Corp" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.676634, 0, 0, 0, 0.634839, -0.200504, 0, 0.843226, 0.150953, 0, 0.628394, 0)
+transform = Transform3D(0.619837, 0, 0, 0, 0.588217, -0.598423, 0, 0.780591, 0.450944, 0, 0.628394, 0)
 mesh = SubResource("CapsuleMesh_5s4e0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 2.9, 0, 0, 0)
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 2.9, 0.0510254, 0.797657, 0)
 shape = SubResource("BoxShape3D_ialkv")
+
+[node name="tête" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.363597, 0, 0, 0, 0.523399, -0.0381415, 1.42444, 0.8824)
+mesh = SubResource("SphereMesh_y3cni")
+
+[node name="Oeil" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.324149, -0.946006, 0, 0.946006, -0.324149, -0.563474, 1.43887, 0.907537)
+mesh = SubResource("CapsuleMesh_hjstv")
+
+[node name="Oeil2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.324149, -0.946006, 0, 0.946006, -0.324149, 0.490983, 1.43887, 0.907537)
+mesh = SubResource("CapsuleMesh_hjstv")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0257462, 1.44666, 1.45596)
