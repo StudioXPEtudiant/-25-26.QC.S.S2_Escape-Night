@@ -47,3 +47,8 @@ func _unhandled_input(event):
 	if event.is_action_pressed("Cancel"): # "ui_cancel" est souvent la touche Échap
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	# Rere-capturer si on clique à nouveau (vous pourriez ajouter une logique)
+	if event is InputEventMouseMotion:
+		var mouse_delta = event.relative
+		rotate_y(-event.relative.x * 0.1)
+		#rotate_x(-event.relative.y * 0.1)
+	
