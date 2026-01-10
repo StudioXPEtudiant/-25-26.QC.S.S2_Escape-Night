@@ -27,7 +27,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-
-
 	
 	move_and_slide()
+
+
+func _input(event):
+	
+	if event is InputEventMouseMotion:
+		var mouse_delta = event.relative
+		rotate_y(-event.relative.x * 0.1)
+		#rotate_x(-event.relative.y * 0.1)
