@@ -30,7 +30,7 @@ func _input(event):
 		# Limiter la rotation verticale pour éviter les retournements (ex: entre -80 et 80 degrés)
 		rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
-@export var sens_souris: float = 0.002 # Ajustez ce facteur
+@export var sens_souris: float = 0.0001 # Ajustez ce facteur
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # Capture le curseur
@@ -48,4 +48,5 @@ func _unhandled_input(event):
 		var mouse_delta = event.relative
 		rotate_y(-event.relative.x * 0.1)
 		#rotate_x(-event.relative.y * 0.1)
-	
+#	if event.is_mouse_mode(Input.MOUSE_MODE_VISIBLE) and event.is_action_pressed("Cancel"):
+#		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
