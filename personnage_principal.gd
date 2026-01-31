@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-
+@onready var camera = $Camera3D
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -19,8 +19,14 @@ func _physics_process(delta: float) -> void:
 		SPEED = 5.0
 	
 	
-	var input_dir := Input.get_vector("Gauche", "Droite", "Avance", "Recule")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var input_dir = Input.get_vector("Gauche", "Droite", "Recule", "Avance")
+	var foward = -camera.global_transform.basis.z
+	var right = camera.global_transform.basis.x
+	foward.y = 0
+	right.y = 0
+	foward = foward.normalized()
+	right = right.normalized()
+	var direction = ( foward * input_dir.y + right * input_dir.x).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
