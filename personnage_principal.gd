@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-
+@onready var camera = $Camera3D
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -19,8 +19,14 @@ func _physics_process(delta: float) -> void:
 		SPEED = 5.0
 	
 	
-	var input_dir := Input.get_vector("Gauche", "Droite", "Avance", "Recule")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var input_dir = Input.get_vector("Gauche", "Droite", "Recule", "Avance")
+	var foward = -camera.global_transform.basis.z
+	var right = camera.global_transform.basis.x
+	foward.y = 0
+	right.y = 0
+	foward = foward.normalized()
+	right = right.normalized()
+	var direction = ( foward * input_dir.y + right * input_dir.x).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -32,8 +38,13 @@ func _physics_process(delta: float) -> void:
 
 
 func _input(event):
-	
-	if event is InputEventMouseMotion:
-		var mouse_delta = event.relative
-		rotate_y(-event.relative.x * 0.1)
-		#rotate_x(-event.relative.y * 0.1)
+	var sens_souris: float = 0.002
+	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		# Rotation horizontale (autour de Y)
+		rotation.y -= event.relative.x * sens_souris
+		
+		# Rotation verticale (autour de X)
+		rotation.x -= event.relative.y * sens_souris
+		
+		# Limiter la rotation verticale pour éviter les retournements (ex: entre -80 et 80 degrés)
+		rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
