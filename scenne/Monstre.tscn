@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dnwhrjxakhhu6"]
 
-[ext_resource type="Script" path="res://monstreIA.gd" id="1_dd7hk"]
-[ext_resource type="Script" path="res://navigation_agent_3d.gd" id="2_clqnc"]
+[ext_resource type="Script" uid="uid://ckfqsd6hcpijh" path="res://script/monstreIA V1.0.gd" id="1_dd7hk"]
+[ext_resource type="Script" uid="uid://dwpg1ic6l2b7q" path="res://script/navigation_agent_3d.gd" id="2_clqnc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_nexf3"]
 
