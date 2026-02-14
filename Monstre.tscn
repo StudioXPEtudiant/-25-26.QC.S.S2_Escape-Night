@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://b223wnab007uo"]
+
+[ext_resource type="Script" path="res://monstreIA.gd" id="1_dd7hk"]
+[ext_resource type="Script" path="res://navigation_agent_3d.gd" id="2_clqnc"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nexf3"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5s4e0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ialkv"]
+size = Vector3(0.741211, 1.09906, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xd3g8"]
+albedo_color = Color(0.49733, 0, 0.16561, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_y3cni"]
+material = SubResource("StandardMaterial3D_xd3g8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_avx5g"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hjstv"]
+material = SubResource("StandardMaterial3D_avx5g")
+radius = 0.125
+height = 0.5
+
+[node name="Node3D" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0421104)
+script = ExtResource("1_dd7hk")
+
+[node name="Bras_Gauche" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.378552, 0, 0, 0, 0.735065, 0.183817, 0, -0.408074, 0.33111, 0.522081, 0.518773, 0.850969)
+mesh = SubResource("CapsuleMesh_nexf3")
+
+[node name="Bras_Droit" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.378552, 0, 0, 0, 0.735065, 0.183817, 0, -0.408074, 0.33111, -0.435056, 0.518773, 1.00476)
+mesh = SubResource("CapsuleMesh_nexf3")
+
+[node name="Corp" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.619837, 0, 0, 0, 0.588217, -0.598423, 0, 0.780591, 0.450944, 0, 0.628394, 0)
+mesh = SubResource("CapsuleMesh_5s4e0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 2.9, 0.0510254, 0.797657, 0)
+shape = SubResource("BoxShape3D_ialkv")
+
+[node name="tête" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.363597, 0, 0, 0, 0.523399, -0.0381415, 1.42444, 0.8824)
+mesh = SubResource("SphereMesh_y3cni")
+
+[node name="Oeil" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.324149, -0.946006, 0, 0.946006, -0.324149, -0.563474, 1.43887, 0.907537)
+mesh = SubResource("CapsuleMesh_hjstv")
+
+[node name="Oeil2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.324149, -0.946006, 0, 0.946006, -0.324149, 0.490983, 1.43887, 0.907537)
+mesh = SubResource("CapsuleMesh_hjstv")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+script = ExtResource("2_clqnc")
