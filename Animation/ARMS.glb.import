@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bjau0ah6ca7sq"
-path="res://.godot/imported/ARMS.glb-d826f88287c05326d7faf060684d28a4.scn"
+path="res://.godot/imported/ARMS.glb-a34b1adcbe639d5ab647b69c5f1bdf6d.scn"
 
 [deps]
 
-source_file="res://ARMS.glb"
-dest_files=["res://.godot/imported/ARMS.glb-d826f88287c05326d7faf060684d28a4.scn"]
+source_file="res://Animation/ARMS.glb"
+dest_files=["res://.godot/imported/ARMS.glb-a34b1adcbe639d5ab647b69c5f1bdf6d.scn"]
 
 [params]
 
@@ -18,6 +18,7 @@ nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
