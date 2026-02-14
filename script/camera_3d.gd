@@ -7,13 +7,7 @@ var angle_cam = rotation_degrees.y
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("mouvement Droite cam"):
-		angle_cam + PI / 4
-	
-	
-	if Input.is_action_pressed("mouvement gauche cam"):
-		angle_cam + PI / 4
-	
+	pass
 
 
 
@@ -47,6 +41,3 @@ func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		var mouse_delta = event.relative
 		rotate_y(-event.relative.x * 0.1)
-		#rotate_x(-event.relative.y * 0.1)
-#	if event.is_mouse_mode(Input.MOUSE_MODE_VISIBLE) and event.is_action_pressed("Cancel"):
-#		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
