@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("Saut") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	if Input.is_action_pressed("Sprint"):
-		SPEED = 10.0
+		SPEED = 50.0
 	else:
 		SPEED = 5.0
 	
