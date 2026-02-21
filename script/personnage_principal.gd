@@ -1,5 +1,7 @@
 extends CharacterBody3D 
 
+var Cowldown = Time
+var Impultion = 20.0
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 @onready var camera = $Camera3D
@@ -13,9 +15,13 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("Saut") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	if Input.is_action_pressed("Sprint"):
-		SPEED = 50.0
+		SPEED = 15.0
 	else:
 		SPEED = 5.0
+	if Input.is_action_pressed("Sprint") and Input.is_action_just_pressed("Accroupir"):
+		velocity = Impultion
+	else:
+		velocity = velocity
 	
 	var input_dir = Input.get_vector("Gauche", "Droite", "Recule", "Avance")
 	var foward = -camera.global_transform.basis.z
