@@ -3,21 +3,21 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://16fiqwvuvn1o"
-path="res://.godot/imported/ARMS.obj-63cb70f795ee3eb9da75df739ab070d2.scn"
+uid="uid://duuher5ps3s50"
+path="res://.godot/imported/ARMS.glb-a34b1adcbe639d5ab647b69c5f1bdf6d.scn"
 
 [deps]
 
-source_file="res://ARMS.obj"
-dest_files=["res://.godot/imported/ARMS.obj-63cb70f795ee3eb9da75df739ab070d2.scn"]
+source_file="res://Animation/ARMS.glb"
+dest_files=["res://.godot/imported/ARMS.glb-a34b1adcbe639d5ab647b69c5f1bdf6d.scn"]
 
 [params]
 
-nodes/root_type="Node3D"
-nodes/root_name="Arms"
+nodes/root_type=""
+nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
-nodes/import_as_skeleton_bones=true
+nodes/import_as_skeleton_bones=false
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -33,3 +33,5 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
+gltf/naming_version=0
+gltf/embedded_image_handling=1
