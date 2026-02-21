@@ -3,19 +3,8 @@ extends Camera3D
 var angle_cam = rotation_degrees.y
 # Called when the node enters the scene tree for the first time.
 
-
-
-
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("mouvement Droite cam"):
-		angle_cam + PI / 4
-	
-	
-	if Input.is_action_pressed("mouvement gauche cam"):
-		angle_cam + PI / 4
-	
-
-
+	pass
 
 func _input(event):
 	
@@ -36,9 +25,6 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # Capture le curseur
 	pass
 
-
-
-
 func _unhandled_input(event):
 	# Relâcher le curseur avec la touche Échap
 	if event.is_action_pressed("Cancel"): # "ui_cancel" est souvent la touche Échap
@@ -47,6 +33,3 @@ func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		var mouse_delta = event.relative
 		rotate_y(-event.relative.x * 0.1)
-		#rotate_x(-event.relative.y * 0.1)
-#	if event.is_mouse_mode(Input.MOUSE_MODE_VISIBLE) and event.is_action_pressed("Cancel"):
-#		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

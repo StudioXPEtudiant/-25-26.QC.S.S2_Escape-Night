@@ -1,6 +1,5 @@
 extends CharacterBody3D 
 
-
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 @onready var camera = $Camera3D
@@ -18,7 +17,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		SPEED = 5.0
 	
-	
 	var input_dir = Input.get_vector("Gauche", "Droite", "Recule", "Avance")
 	var foward = -camera.global_transform.basis.z
 	var right = camera.global_transform.basis.x
@@ -35,7 +33,6 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
 	move_and_slide()
-
 
 func _input(event):
 	var sens_souris: float = 0.002
