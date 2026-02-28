@@ -1,6 +1,6 @@
 extends CharacterBody3D 
 
-var Cowldown = Time
+
 var Impultion = 40.0
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -45,14 +45,14 @@ func _physics_process(delta: float) -> void:
 		velocity.z = direction.z * SPEED
 	move_and_slide()
 
-func _input(event):
-	var sens_souris: float = 0.002
-	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+#func _input(event):
+	#var sens_souris: float = 0.002
+	#if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		# Rotation horizontale (autour de Y)
-		rotation.y -= event.relative.x * sens_souris
+	#	rotation.y -= event.relative.x * sens_souris
 		
 		# Rotation verticale (autour de X)
-		rotation.x -= event.relative.y * sens_souris
+	#	rotation.x -= event.relative.y * sens_souris
 		
 		# Limiter la rotation verticale pour éviter les retournements (ex: entre -80 et 80 degrés)
-		rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
+	#	rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
