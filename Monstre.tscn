@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dnwhrjxakhhu6"]
+[gd_scene load_steps=11 format=3 uid="uid://dnwhrjxakhhu6"]
 
 [ext_resource type="Script" uid="uid://ckfqsd6hcpijh" path="res://script/monstreIA V1.0.gd" id="1_dd7hk"]
-[ext_resource type="Script" path="res://script/navigation_agent_3d V1.1.gd" id="2_2n36j"]
+[ext_resource type="Script" uid="uid://dwpg1ic6l2b7q" path="res://script/navigation_agent_3d V1.1.gd" id="2_2n36j"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2n36j"]
 
@@ -52,7 +52,9 @@ mesh = SubResource("CapsuleMesh_hjstv")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 script = ExtResource("2_2n36j")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationAgent3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0421104)
+skeleton = NodePath("../..")
 
 [node name="cou" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.368559, 0, 0, 0, 0.352906, 0, 0, 0, 0.241753, 0.203744, 2.64388, 0.225868)
