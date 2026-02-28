@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dfpd7q6gfhpr3"]
 
 [ext_resource type="PackedScene" uid="uid://dnwhrjxakhhu6" path="res://Monstre.tscn" id="1_dxf6b"]
-[ext_resource type="PackedScene" uid="uid://d24f3wqjx8gfw" path="res://script/node_3d.tscn" id="2_8lorh"]
+[ext_resource type="PackedScene" path="res://script/node_3d.tscn" id="2_8lorh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4cqt"]
 albedo_color = Color(1, 0, 1, 1)
