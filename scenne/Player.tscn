@@ -6,7 +6,7 @@
 radius = 0.55
 height = 2.01
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_b4b86")
