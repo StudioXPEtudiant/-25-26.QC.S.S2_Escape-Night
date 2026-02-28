@@ -10,6 +10,8 @@ albedo_color = Color(1, 0, 1, 1)
 material = SubResource("StandardMaterial3D_t4cqt")
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_fjfmr"]
+vertices = PackedVector3Array(0.274002, -0.75, -285.775, 0.274002, -0.75, -200.525, 124.024, -0.75, -200.525, 124.024, -0.75, -285.775, -124.726, 1.75, -1.77484, 124.524, 1.75, -1.52484, 124.524, 1.75, -199.525, -124.726, 1.75, -199.525, 0.274002, -0.5, -199.275, 0.274002, -0.5, -195.025, 124.024, -0.5, -195.025, 124.024, -0.5, -199.275, -124.976, 1.75, -0.0248413, -126.726, 1.75, -0.0248413, -126.726, 1.75, 199.225, 124.524, 1.75, 199.475, -247.976, 1.75, -0.0248413, -247.976, 1.75, 199.225)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(14, 13, 12), PackedInt32Array(12, 4, 14), PackedInt32Array(14, 4, 5), PackedInt32Array(14, 5, 15), PackedInt32Array(17, 16, 14), PackedInt32Array(14, 16, 13)]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igw0p"]
 albedo_color = Color(0.560784, 0.560784, 0.560784, 1)

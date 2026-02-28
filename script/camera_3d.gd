@@ -19,7 +19,7 @@ func _input(event):
 		# Limiter la rotation verticale pour éviter les retournements (ex: entre -80 et 80 degrés)
 		rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
-@export var sens_souris: float = 0.0001 # Ajustez ce facteur
+@export var sens_souris: float = 0.0001# sensibilité de la cam
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # Capture le curseur

@@ -21,6 +21,7 @@ transform = Transform3D(0.247799, 0, 0, 0, 0.0184483, -0.255721, 0, 0.29653, 0.0
 mesh = SubResource("CapsuleMesh_odvco")
 
 [node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.284684, 0)
 script = ExtResource("2_jswb2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

@@ -28,15 +28,18 @@ func _physics_process(delta: float) -> void:
 	foward = foward.normalized()
 	right = right.normalized()
 	var direction = ( foward * input_dir.y + right * input_dir.x).normalized()
-	if direction:
+	if direction:#WASD (ou ZQSD)
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-	if Input.is_action_pressed("Sprint") and Input.is_action_pressed("Accroupir"):
+	if Input.is_action_pressed("Sprint") and Input.is_action_just_pressed("Accroupir"):#shift et "c"
 		velocity.x = direction.x*Impultion
 		velocity.z = direction.z*Impultion
+		await get_tree().create_timer(2.0).timeout#durée de l'effet
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
 	else:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
