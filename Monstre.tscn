@@ -1,4 +1,5 @@
 [gd_scene load_steps=11 format=3 uid="uid://dnwhrjxakhhu6"]
+[gd_scene load_steps=9 format=3 uid="uid://dnwhrjxakhhu6"]
 
 [ext_resource type="Script" uid="uid://ckfqsd6hcpijh" path="res://script/monstreIA V1.0.gd" id="1_dd7hk"]
 [ext_resource type="Script" uid="uid://dwpg1ic6l2b7q" path="res://script/navigation_agent_3d V1.1.gd" id="2_2n36j"]
@@ -10,15 +11,6 @@
 [sub_resource type="BoxMesh" id="BoxMesh_c74gb"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_2n36j"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_avx5g"]
-albedo_color = Color(0, 0, 0, 1)
-metallic = 1.0
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_hjstv"]
-material = SubResource("StandardMaterial3D_avx5g")
-radius = 0.125
-height = 0.5
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xjwih"]
 
@@ -44,10 +36,6 @@ mesh = SubResource("BoxMesh_c74gb")
 [node name="tête" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.131104, 0.125307, 0, -0.0180591, -0.909684, 0.203322, 3.10205, 0.244101)
 mesh = SubResource("CylinderMesh_2n36j")
-
-[node name="Oeil2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.324149, -0.946006, 0, 0.946006, -0.324149, 0.490983, -41.1374, -120.261)
-mesh = SubResource("CapsuleMesh_hjstv")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 script = ExtResource("2_2n36j")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqutx4nj22ttk"]
+[gd_scene load_steps=8 format=3 uid="uid://dtbpcjiy41ib3"]
 
 [ext_resource type="Material" uid="uid://d07msuwoaenqk" path="res://Difference rouge.tres" id="1_x7ysh"]
 [ext_resource type="Material" uid="uid://j6kos7l5iw2e" path="res://Difference bleu.tres" id="2_xencj"]
