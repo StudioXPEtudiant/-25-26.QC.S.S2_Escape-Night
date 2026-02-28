@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://t0oepghs0plp"]
+[gd_scene load_steps=12 format=3 uid="uid://t0oepghs0plp"]
 
-[ext_resource type="PackedScene" uid="uid://dnwhrjxakhhu6" path="res://Monstre.tscn" id="1_e7guc"]
+[ext_resource type="PackedScene" uid="uid://dnwhrjxakhhu6" path="res://scenne/Monstre.tscn" id="1_e7guc"]
 [ext_resource type="PackedScene" uid="uid://gf8yowy5duun" path="res://scenne/node_3d.tscn" id="2_f05jn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a1s2"]
@@ -32,17 +32,6 @@ material = SubResource("StandardMaterial3D_t4cqt")
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_fjfmr"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_e7guc"]
-_surfaces = [{
-"aabb": AABB(-125, -1, -200, 250, 2, 400),
-"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
-"format": 34359738391,
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 36,
-"vertex_data": PackedByteArray("AAD6wgAAgL8AAEhDAAD6wgAAgL8AAEjDAAD6wgAAgD8AAEjDAAD6QgAAgL8AAEjDAAD6wgAAgL8AAEjDAAD6wgAAgL8AAEhDAAD6wgAAgD8AAEjDAAD6wgAAgL8AAEjDAAD6QgAAgL8AAEjDAAD6wgAAgD8AAEjDAAD6wgAAgD8AAEhDAAD6wgAAgL8AAEhDAAD6wgAAgL8AAEhDAAD6wgAAgD8AAEhDAAD6QgAAgD8AAEhDAAD6QgAAgD8AAEhDAAD6wgAAgD8AAEhDAAD6wgAAgD8AAEjDAAD6wgAAgL8AAEhDAAD6QgAAgL8AAEhDAAD6QgAAgL8AAEjDAAD6QgAAgD8AAEhDAAD6QgAAgL8AAEhDAAD6wgAAgL8AAEhDAAD6QgAAgL8AAEjDAAD6QgAAgL8AAEhDAAD6QgAAgD8AAEhDAAD6QgAAgL8AAEjDAAD6QgAAgD8AAEjDAAD6wgAAgD8AAEjDAAD6wgAAgD8AAEjDAAD6QgAAgD8AAEjDAAD6QgAAgD8AAEhDAAD6QgAAgD8AAEhDAAD6QgAAgD8AAEjDAAD6QgAAgL8AAEjDAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
-}]
-
 [node name="Node3D2" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0173149, 0)
 
@@ -67,7 +56,6 @@ skeleton = NodePath("")
 
 [node name="Node3D" parent="." instance=ExtResource("1_e7guc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47439, 2.59412, -6.99341)
-script = null
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.1, 2.1, -2.35)
@@ -139,6 +127,3 @@ skeleton = NodePath("")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/CSGBox3D"]
 mesh = SubResource("BoxMesh_e456h")
-
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
-mesh = SubResource("ArrayMesh_e7guc")
