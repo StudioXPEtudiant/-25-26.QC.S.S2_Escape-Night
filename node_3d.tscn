@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d24f3wqjx8gfw"]
+[gd_scene load_steps=5 format=3 uid="uid://c3m58220ohf4b"]
 
 [ext_resource type="Script" uid="uid://dd8joq86u5u3m" path="res://script/personnage_principal.gd" id="1_rp3qt"]
 [ext_resource type="Script" uid="uid://h4ewu3wk3ej6" path="res://script/camera_3d.gd" id="2_jswb2"]
@@ -21,6 +21,7 @@ transform = Transform3D(0.247799, 0, 0, 0, 0.0184483, -0.255721, 0, 0.29653, 0.0
 mesh = SubResource("CapsuleMesh_odvco")
 
 [node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.284684, 0)
 script = ExtResource("2_jswb2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
