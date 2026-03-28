@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dnwhrjxakhhu6"]
+[gd_scene load_steps=9 format=3 uid="uid://dnwhrjxakhhu6"]
 
 [ext_resource type="Script" uid="uid://ckfqsd6hcpijh" path="res://script/monstreIA V1.0.gd" id="1_dd7hk"]
-[ext_resource type="Script" path="res://script/navigation_agent_3d V1.1.gd" id="2_2n36j"]
+[ext_resource type="Script" uid="uid://dwpg1ic6l2b7q" path="res://script/navigation_agent_3d V1.1.gd" id="2_2n36j"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2n36j"]
 
@@ -14,10 +14,10 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xjwih"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ialkv"]
-size = Vector3(0.741211, 1.09906, 1)
+size = Vector3(0.681641, 1.38299, 0.623169)
 
 [node name="Node3D" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0421104)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167518, -0.558997, 0)
 script = ExtResource("1_dd7hk")
 
 [node name="Bras_Gauche" type="MeshInstance3D" parent="."]
@@ -39,12 +39,10 @@ mesh = SubResource("CylinderMesh_2n36j")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 script = ExtResource("2_2n36j")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-
 [node name="cou" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.368559, 0, 0, 0, 0.352906, 0, 0, 0, 0.241753, 0.203744, 2.64388, 0.225868)
 mesh = SubResource("CapsuleMesh_xjwih")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(2.89356, 0, 0, 0, 2, 0, 0, 0, 2, 0.27929, 2.171, 0)
+transform = Transform3D(2.89356, 0, 0, 0, 2, 0, 0, 0, 2, 0.193105, 1.96094, 0.123169)
 shape = SubResource("BoxShape3D_ialkv")
