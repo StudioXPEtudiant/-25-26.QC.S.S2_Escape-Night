@@ -1,10 +1,20 @@
 extends CharacterBody3D 
 
+@onready var collision_shape = $CollisionShape3D
+@onready var camera = $Camera3D
+@onready var crouch_cast = $ShapeCast3D # Un ShapeCast3D pointant vers le haut
 
 var Impultion = 40.0
 var SPEED = 5.0
+var is_crouching = false
+var stand_height = 2.0
+var crouch_height = 1.0
+var camera_stand_pos = 1.5
+var camera_crouch_pos = 0.5
+
 const JUMP_VELOCITY = 4.5
-@onready var camera = $Camera3D
+
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -44,8 +54,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	if Input.is_action_pressed("Accroupir"):
-		
+		crouch()
 		pass
+	else:
+		if !crouch_cast.is_colliding(): # Ne se relève que si l'espace est libre
+			stand()
 	move_and_slide()
 
 func _input(event):
@@ -59,3 +72,17 @@ func _input(event):
 		
 		# Limiter la rotation verticale pour éviter les retournements (ex: entre -80 et 80 degrés)
 		rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
+
+func crouch():
+	if not is_crouching:
+		is_crouching = true# Réduire la hauteur de la collision et la caméra
+		collision_shape.shape.height = crouch_height
+		collision_shape.position.y = crouch_height / 2
+		camera.position.y = camera_crouch_pos
+
+func stand():
+	if is_crouching:
+		is_crouching = false# Rétablir la hauteur
+		collision_shape.shape.height = stand_height
+		collision_shape.position.y = stand_height / 2
+		camera.position.y = camera_stand_pos
