@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://t0oepghs0plp"]
+[gd_scene load_steps=12 format=3 uid="uid://dfpd7q6gfhpr3"]
 
 [ext_resource type="PackedScene" uid="uid://dnwhrjxakhhu6" path="res://scenne/Monstre.tscn" id="1_e7guc"]
-[ext_resource type="PackedScene" uid="uid://gf8yowy5duun" path="res://scenne/node_3d.tscn" id="2_f05jn"]
+[ext_resource type="PackedScene" uid="uid://d24f3wqjx8gfw" path="res://scenne/node_3d.tscn" id="2_f05jn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a1s2"]
 albedo_color = Color(0.560955, 0.560955, 0.560955, 1)
