@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6trjaryq1jyg"]
+[gd_scene load_steps=13 format=3 uid="uid://b6trjaryq1jyg"]
 
 [ext_resource type="PackedScene" uid="uid://c7mj3q8t54x6n" path="res://Monstre.tscn" id="1_dxf6b"]
 [ext_resource type="PackedScene" uid="uid://c3m58220ohf4b" path="res://node_3d.tscn" id="2_8lorh"]
+[ext_resource type="PackedScene" uid="uid://c0kvsgxmf8uis" path="res://Gun.tscn" id="3_755ep"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4cqt"]
 albedo_color = Color(1, 0, 1, 1)
@@ -70,3 +71,6 @@ skeleton = NodePath("")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/CSGBox3D"]
 mesh = SubResource("BoxMesh_e456h")
+
+[node name="Node3D" parent="." instance=ExtResource("3_755ep")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01941, 2.90574, -1.56973)

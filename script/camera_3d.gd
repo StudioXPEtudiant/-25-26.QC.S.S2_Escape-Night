@@ -1,25 +1,27 @@
 extends Camera3D
 
 var angle_cam = rotation_degrees.y
-# Called when the node enters the scene tree for the first time.
 
+#@export var sens_souris: float = 1e-2# sensibilité de la cam
 func _process(delta: float) -> void:
-	pass
+	Input.get_last_mouse_velocity()
+	rotation.y = clamp(rotation.y, deg_to_rad(-80), deg_to_rad(80))
+	rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 func _input(event):
+	pass
 	
-	
-	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+	#if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		# Rotation horizontale (autour de Y)
-		rotation.y -= event.relative.x * sens_souris
+	#	rotation.y -= event.relative.x * sens_souris
 		
 		# Rotation verticale (autour de X)
-		rotation.x -= event.relative.y * sens_souris
+		#rotation.x -= event.relative.y * sens_souris
 		
 		# Limiter la rotation verticale pour éviter les retournements (ex: entre -80 et 80 degrés)
-		rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
+	#	rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
-@export var sens_souris: float = 1e-511# sensibilité de la cam
+
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # Capture le curseur
