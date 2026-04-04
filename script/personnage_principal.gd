@@ -28,8 +28,13 @@ func _physics_process(delta: float) -> void:
 		SPEED = 15.0
 	else:
 		SPEED = 5.0
-	
-	
+	if Input.is_action_pressed("Accroupir"):
+		crouch()
+		pass
+	else:
+	#	if !crouch_cast.is_colliding(): # Ne se relève que si l'espace est libre
+	#		stand()
+		pass
 	var input_dir = Input.get_vector("Gauche", "Droite", "Recule", "Avance")
 	var foward = -camera.global_transform.basis.z
 	var right = camera.global_transform.basis.x
@@ -53,16 +58,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-	if Input.is_action_pressed("Accroupir"):
-		crouch()
-		pass
-	else:
-		if !crouch_cast.is_colliding(): # Ne se relève que si l'espace est libre
-			stand()
+	
 	move_and_slide()
 
 func _input(event):
-	var sens_souris: float = 0.002
+	var sens_souris: float = 1e-511
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		# Rotation horizontale (autour de Y)
 		rotation.y -= event.relative.x * sens_souris
