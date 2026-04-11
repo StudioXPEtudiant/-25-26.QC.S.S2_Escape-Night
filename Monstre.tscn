@@ -13,36 +13,35 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xjwih"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ialkv"]
-size = Vector3(0.681641, 1.38299, 0.623169)
+[sub_resource type="BoxShape3D" id="BoxShape3D_2n36j"]
+size = Vector3(2.07281, 2.77927, 1)
 
 [node name="Node3D" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167518, -0.558997, 0)
 script = ExtResource("1_dd7hk")
 
 [node name="Bras_Gauche" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.291394, -0.535974, 0.0123468, 0.192385, 0.540554, 0.217004, -0.146217, -0.356901, 0.310127, 0.741277, 2.04528, 0.21534)
+transform = Transform3D(0.291394, -0.535974, 0.0123468, 0.192385, 0.540554, 0.217004, -0.146217, -0.356901, 0.310127, 0.571701, 1.51134, 0.21534)
 mesh = SubResource("BoxMesh_2n36j")
 
 [node name="Bras_Droit" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.29328, 0.480138, -0.102764, -0.0949481, 0.564596, 0.264046, 0.219712, -0.396918, 0.251281, -0.335392, 2.00849, 0.205141)
+transform = Transform3D(0.29328, 0.480138, -0.102764, -0.0949481, 0.564596, 0.264046, 0.219712, -0.396918, 0.251281, -0.504968, 1.47455, 0.205141)
 mesh = SubResource("BoxMesh_xjwih")
 
 [node name="Corp" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.651536, 0, 0, 0, 1.92439, -0.0719166, 0, 0.233764, 0.592034, 0.184639, 1.58162, 0.0349089)
+transform = Transform3D(0.651536, 0, 0, 0, 1.92439, -0.0719166, 0, 0.233764, 0.592034, 0.0150633, 1.04768, 0.0349089)
 mesh = SubResource("BoxMesh_c74gb")
 
 [node name="tête" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.131104, 0.125307, 0, -0.0180591, -0.909684, 0.203322, 3.10205, 0.244101)
+transform = Transform3D(1, 0, 0, 0, -0.131104, 0.125307, 0, -0.0180591, -0.909684, 0.0337463, 2.56811, 0.244101)
 mesh = SubResource("CylinderMesh_2n36j")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 script = ExtResource("2_2n36j")
 
 [node name="cou" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.368559, 0, 0, 0, 0.352906, 0, 0, 0, 0.241753, 0.203744, 2.64388, 0.225868)
+transform = Transform3D(0.368559, 0, 0, 0, 0.352906, 0, 0, 0, 0.241753, 0.0341683, 2.10994, 0.225868)
 mesh = SubResource("CapsuleMesh_xjwih")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(2.89356, 0, 0, 0, 2, 0, 0, 0, 2, 0.193105, 1.96094, 0.123169)
-shape = SubResource("BoxShape3D_ialkv")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0145876, 1.40626, 0.123169)
+shape = SubResource("BoxShape3D_2n36j")

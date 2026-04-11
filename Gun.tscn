@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0kvsgxmf8uis"]
+[gd_scene load_steps=4 format=3 uid="uid://c0kvsgxmf8uis"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8654n"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8654n"]
 radius = 1.99997
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8654n"]
+height = 0.0267334
+radius = 0.00830078
+
+[node name="Pistolet" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0299916, 0, 0, 0, 0.0929738, 0, 0, 0, 0.0299916, 0, 0, 0)
@@ -19,5 +23,16 @@ mesh = SubResource("BoxMesh_8654n")
 transform = Transform3D(0.0299916, 0, 0, 0, -0.00040081, 0.0299913, 0, -0.092973, -0.000129293, 0, 0.032, 0.047)
 mesh = SubResource("BoxMesh_8654n")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="Zone de ramassage" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Zone de ramassage" type="CollisionShape3D" parent="Zone de ramassage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("SphereShape3D_8654n")
+
+[node name="Sorti de canon2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 5.21737e-15, 0, 0, 1, 0, 5.47081e-09, 0)
+
+[node name="Sorti de canon" type="CollisionShape3D" parent="Sorti de canon2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0322147, 0.10205)
+shape = SubResource("CylinderShape3D_8654n")

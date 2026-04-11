@@ -36,7 +36,6 @@ material = SubResource("StandardMaterial3D_1a1s2")
 size = Vector3(250, 2.5, 400)
 
 [node name="Node3D" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0173149, 0)
 
 [node name="Monstre" parent="." instance=ExtResource("1_dxf6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54519, 1, -8.79493)
@@ -73,4 +72,4 @@ skeleton = NodePath("")
 mesh = SubResource("BoxMesh_e456h")
 
 [node name="Node3D" parent="." instance=ExtResource("3_755ep")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01941, 2.90574, -1.56973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01941, 2.15465, -1.56973)
