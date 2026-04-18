@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dd8joq86u5u3m" path="res://script/personnage_principal.gd" id="1_rp3qt"]
 [ext_resource type="Script" uid="uid://h4ewu3wk3ej6" path="res://script/camera_3d.gd" id="2_jswb2"]
 [ext_resource type="PackedScene" uid="uid://c0kvsgxmf8uis" path="res://Gun.tscn" id="3_a0tk4"]
-[ext_resource type="Script" uid="uid://b630xd7fltal7" path="res://Pistolet.gd" id="4_r3fl7"]
-[ext_resource type="Script" uid="uid://b7vu1xjdxmllh" path="res://amo_indicator.gd" id="5_jka67"]
+[ext_resource type="Script" uid="uid://b27184drb732q" path="res://script/Gun.gd" id="4_jka67"]
+[ext_resource type="Script" uid="uid://b7vu1xjdxmllh" path="res://script/amo_indicator.gd" id="5_jka67"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_odvco"]
 
@@ -33,7 +33,7 @@ shape = SubResource("BoxShape3D_ma6vh")
 [node name="Pistolet" parent="." instance=ExtResource("3_a0tk4")]
 transform = Transform3D(-1, 0, -1.79233e-07, 0, 1.67647, 0, 8.74228e-08, 0, -2.05019, 0.245476, 0.0688129, -0.352129)
 visible = false
-script = ExtResource("4_r3fl7")
+script = ExtResource("4_jka67")
 
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_right = 173.0
