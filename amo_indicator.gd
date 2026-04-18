@@ -4,5 +4,5 @@ extends TextEdit
 
 
 func _process(delta: float) -> void:
-	text = Gun.var.amo
+	set_text(Gun.var.amo)
 	pass

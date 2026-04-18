@@ -39,6 +39,7 @@ size = Vector3(250, 2.5, 400)
 
 [node name="Monstre" parent="." instance=ExtResource("1_dxf6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54519, 1, -8.79493)
+script = null
 
 [node name="Player" parent="." instance=ExtResource("2_8lorh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.27338, 3.61697, -9.31347)
