@@ -86,3 +86,10 @@ func stand():
 		collision_shape.shape.height = stand_height
 		collision_shape.position.y = stand_height / 2
 		camera.position.y = camera_stand_pos
+
+signal munitions_changed(nouvelle_valeur)
+var munitions = 30
+
+func tirer():
+	munitions -= 1
+	munitions_changed.emit(munitions) # Émet le signal

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://h4ewu3wk3ej6" path="res://script/camera_3d.gd" id="2_jswb2"]
 [ext_resource type="PackedScene" uid="uid://c0kvsgxmf8uis" path="res://Gun.tscn" id="3_a0tk4"]
 [ext_resource type="Script" uid="uid://b27184drb732q" path="res://script/Gun.gd" id="4_jka67"]
-[ext_resource type="Script" uid="uid://b7vu1xjdxmllh" path="res://script/amo_indicator.gd" id="5_jka67"]
+[ext_resource type="Script" uid="uid://2as6gsdj1ap3" path="res://AmoIndicator.gd" id="5_jka67"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_odvco"]
 
@@ -35,7 +35,7 @@ transform = Transform3D(-1, 0, -1.79233e-07, 0, 1.67647, 0, 8.74228e-08, 0, -2.0
 visible = false
 script = ExtResource("4_jka67")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_right = 173.0
-offset_bottom = 103.0
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
 script = ExtResource("5_jka67")
