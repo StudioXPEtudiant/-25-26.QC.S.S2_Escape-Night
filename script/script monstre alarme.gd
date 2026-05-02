@@ -17,14 +17,15 @@ func _physics_process(delta):
 		return
 
 	var distance = global_position.distance_to(player.global_position)
-
 	if distance < trigger_distance:
 		trigger_alarm()
 
 func trigger_alarm():
 	has_triggered = true
 	print("FLASH")
+	flash()
 
+func flash():
 	light.visible = true
 	await get_tree().create_timer(flash_duration).timeout
 	light.visible = false

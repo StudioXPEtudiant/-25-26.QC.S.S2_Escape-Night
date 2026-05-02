@@ -2,10 +2,8 @@ extends CharacterBody3D
 
 @export var speed_calm: float = 2.0
 @export var speed_angry: float = 5.0
-
 @export var hunger_increase: float = 1.0
 @export var hunger_threshold: float = 10.0
-
 @export var light_threshold: float = 0.7
 
 var player: Node3D
@@ -18,11 +16,9 @@ func _ready():
 func _physics_process(delta):
 	if player == null:
 		return
-
 	update_hunger(delta)
 	check_environment()
 	behave()
-
 	move_and_slide()
 
 func update_hunger(delta):
@@ -31,7 +27,6 @@ func update_hunger(delta):
 func check_environment():
 	var in_light = is_in_light()
 	var is_hungry = hunger > hunger_threshold
-
 	if not in_light or is_hungry:
 		is_angry = true
 	else:
@@ -41,12 +36,9 @@ func is_in_light() -> bool:
 	var camera = get_viewport().get_camera_3d()
 	if camera == null:
 		return false
-
 	var to_monster = (global_position - camera.global_position).normalized()
 	var forward = -camera.global_transform.basis.z.normalized()
-
 	var dot = forward.dot(to_monster)
-
 	return dot > light_threshold
 
 func behave():

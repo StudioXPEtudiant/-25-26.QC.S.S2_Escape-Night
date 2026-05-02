@@ -10,7 +10,7 @@ func _ready():
 	player = get_tree().get_first_node_in_group("player")
 	camera = get_viewport().get_camera_3d()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if player == null or camera == null:
 		return
 
@@ -24,8 +24,7 @@ func _physics_process(delta):
 func is_visible_to_player() -> bool:
 	var to_monster = (global_position - camera.global_position).normalized()
 	var camera_forward = -camera.global_transform.basis.z.normalized()
-
-	var dot = camera_forward.dot(to_monster)
+	var dot = camera_forward.dot(to_monster)  # ← underscore au bon endroit
 
 	if dot < 0.6:
 		return false
@@ -36,17 +35,14 @@ func is_visible_to_player() -> bool:
 		global_position
 	)
 	query.exclude = [camera.get_parent()]
-
 	var result = space.intersect_ray(query)
 
 	if result and result.collider == self:
 		return true
-
 	return false
 
 func charge_player():
 	var distance = global_position.distance_to(player.global_position)
-
 	if distance > stop_distance:
 		var dir = (player.global_position - global_position).normalized()
 		velocity = dir * speed

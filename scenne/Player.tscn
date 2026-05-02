@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3r168do521cw"]
+[gd_scene format=3 uid="uid://b3r168do521cw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_b4b86"]
 
@@ -6,15 +6,15 @@
 radius = 0.55
 height = 2.01
 
-[node name="Node3D2" type="Node3D"]
+[node name="Node3D2" type="Node3D" unique_id=1049333086]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1562784095]
 mesh = SubResource("CapsuleMesh_b4b86")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="MeshInstance3D"]
+[node name="RigidBody3D" type="RigidBody3D" parent="MeshInstance3D" unique_id=704624877]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/RigidBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/RigidBody3D" unique_id=254291502]
 shape = SubResource("CapsuleShape3D_12qpr")
 
-[node name="Camera3D" type="Camera3D" parent="MeshInstance3D"]
+[node name="Camera3D" type="Camera3D" parent="MeshInstance3D" unique_id=2065745575]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.678712, 0.177104)
