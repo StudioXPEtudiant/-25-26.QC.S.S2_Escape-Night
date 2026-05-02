@@ -1,5 +1,5 @@
 extends Label
-var munitions = 30
+var munitions = 10
 
 func _process(_delta):
 	# Conversion du nombre en texte avec str()
