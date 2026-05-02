@@ -32,6 +32,7 @@ func _physics_process(delta: float) -> void:
 		crouch()
 		pass
 	else:
+		stand()
 	#	if !crouch_cast.is_colliding(): # Ne se relève que si l'espace est libre
 	#		stand()
 		pass
@@ -74,15 +75,23 @@ func _input(event):
 		rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 func crouch():
-	if not is_crouching:
+	if  not is_crouching:
 		is_crouching = true# Réduire la hauteur de la collision et la caméra
-		collision_shape.shape.height = crouch_height
+		collision_shape.shape.size.y = crouch_height
 		collision_shape.position.y = crouch_height / 2
 		camera.position.y = camera_crouch_pos
 
 func stand():
-	if is_crouching:
+	if  is_crouching:
 		is_crouching = false# Rétablir la hauteur
-		collision_shape.shape.height = stand_height
+		collision_shape.shape.size.y = stand_height
 		collision_shape.position.y = stand_height / 2
 		camera.position.y = camera_stand_pos
+
+signal munitions_changed(nouvelle_valeur)
+var munitions = 10
+
+func tirer():
+	#if Input.is_action_just_pressed("Attaque"):
+	munitions -= 1
+	munitions_changed.emit(munitions) # Émet le signal
