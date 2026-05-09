@@ -5,8 +5,8 @@ var angle_cam = rotation_degrees.y
 #@export var sens_souris: float = 1e-2# sensibilité de la cam
 func _process(delta: float) -> void:
 	Input.get_last_mouse_velocity()
-	#rotation.y = clamp(rotation.y, deg_to_rad(-180), deg_to_rad(180))
-	rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
+	#rotation.y = clamp(rotation.y, deg_to_rad(-80), deg_to_rad(80))
+	#rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 func _input(event):
 	pass
@@ -34,4 +34,4 @@ func _unhandled_input(event):
 	# Rere-capturer si on clique à nouveau (vous pourriez ajouter une logique)
 	if event is InputEventMouseMotion:
 		var mouse_delta = event.relative
-		rotate_y(-event.relative.x * 0.1)
+		rotate_x(-event.relative.y * 0.1)

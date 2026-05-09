@@ -30,7 +30,6 @@ func _physics_process(delta: float) -> void:
 		SPEED = 5.0
 	if Input.is_action_pressed("Accroupir"):
 		crouch()
-		pass
 	else:
 		stand()
 	#	if !crouch_cast.is_colliding(): # Ne se relève que si l'espace est libre
@@ -64,15 +63,10 @@ func _physics_process(delta: float) -> void:
 
 func _input(event):
 	var sens_souris: float = 1e-511
-	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		# Rotation horizontale (autour de Y)
-		rotation.y -= event.relative.x * sens_souris
-		
-		# Rotation verticale (autour de X)
-		rotation.x -= event.relative.y * sens_souris
-		
-		# Limiter la rotation verticale pour éviter les retournements (ex: entre -80 et 80 degrés)
-		rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
+	if event is InputEventMouseMotion:
+		var mouse_delta = event.relative
+		rotate_y(-event.relative.x * 0.1)
+
 
 func crouch():
 	if  not is_crouching:
