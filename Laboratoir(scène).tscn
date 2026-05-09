@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b6trjaryq1jyg"]
+[gd_scene format=3 uid="uid://b6trjaryq1jyg"]
 
 [ext_resource type="PackedScene" uid="uid://c7mj3q8t54x6n" path="res://Monstre.tscn" id="1_dxf6b"]
 [ext_resource type="PackedScene" uid="uid://c3m58220ohf4b" path="res://node_3d.tscn" id="2_8lorh"]
@@ -35,42 +35,42 @@ albedo_color = Color(0.651035, 0.530553, 0.490958, 1)
 material = SubResource("StandardMaterial3D_1a1s2")
 size = Vector3(250, 2.5, 400)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" unique_id=45776828]
 
-[node name="Monstre" parent="." instance=ExtResource("1_dxf6b")]
+[node name="Monstre" parent="." unique_id=1611866221 instance=ExtResource("1_dxf6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54519, 1, -8.79493)
 script = null
 
-[node name="Player" parent="." instance=ExtResource("2_8lorh")]
+[node name="Player" parent="." unique_id=415611021 instance=ExtResource("2_8lorh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.27338, 3.61697, -9.31347)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1284583568]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.1, 2.1, -2.35)
 mesh = SubResource("CapsuleMesh_w4cp3")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=261055759]
 transform = Transform3D(0.889236, 0.457225, -0.0143281, 0.00603239, 0.0195985, 0.99979, 0.457409, -0.889135, 0.0146695, 0, 14.8334, 0)
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=43567563]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.921, 0, 0.018)
 navigation_mesh = SubResource("NavigationMesh_fjfmr")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D" unique_id=907558992]
 use_collision = true
 size = Vector3(250, 2, 400)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="NavigationRegion3D/CSGBox3D"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="NavigationRegion3D/CSGBox3D" unique_id=1359992871]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -185.976, 0, 99.661)
 mesh = SubResource("BoxMesh_hn602")
 skeleton = NodePath("")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="NavigationRegion3D/CSGBox3D"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="NavigationRegion3D/CSGBox3D" unique_id=682113967]
 transform = Transform3D(0.998378, 0, 0, 0, 0.998378, 0, 0, 0, -1.09271, 62.167, 0, -240.448)
 mesh = SubResource("BoxMesh_ydyjn")
 skeleton = NodePath("")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/CSGBox3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/CSGBox3D" unique_id=1634783842]
 mesh = SubResource("BoxMesh_e456h")
 
-[node name="Node3D" parent="." instance=ExtResource("3_755ep")]
+[node name="Node3D" parent="." unique_id=1230103571 instance=ExtResource("3_755ep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01941, 2.15465, -1.56973)

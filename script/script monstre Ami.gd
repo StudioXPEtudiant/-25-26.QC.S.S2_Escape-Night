@@ -18,7 +18,7 @@ enum MonsterType {
 @export var heal_radius: float = 4.0
 @export var day_start_hour: float = 6.0
 @export var day_end_hour: float = 20.0
-@export var current_hour: float = 12.0  # à connecter à ton système jour/nuit
+@export var current_hour: float = 12.0  
 @export var detection_radius: float = 15.0
 @export var regen_delay: float = 4.0
 @export var regen_speed: float = 20.0
