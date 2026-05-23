@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://b27184drb732q" path="res://script/Gun.gd" id="4_jka67"]
 [ext_resource type="Script" uid="uid://2as6gsdj1ap3" path="res://AmoIndicator.gd" id="5_jka67"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jka67"]
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_odvco"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ma6vh"]
@@ -14,8 +16,13 @@ size = Vector3(1, 2, 0.764)
 [node name="Player" type="CharacterBody3D" unique_id=1844134769]
 script = ExtResource("1_rp3qt")
 
+[node name="ShapeCast3D" type="ShapeCast3D" parent="." unique_id=748166182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4965763, 0)
+shape = SubResource("BoxShape3D_jka67")
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=367073077]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0425433, 1.4967341, 0.2036)
+rotation_order = 1
 script = ExtResource("2_jswb2")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Camera3D" unique_id=2002355986]

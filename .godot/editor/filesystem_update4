@@ -1,2 +1,4 @@
 res://node_3d.tscn
 res://script/camera_3d.gd
+res://script/personnage_principal.gd
+res://Laboratoir(scène).tscn
