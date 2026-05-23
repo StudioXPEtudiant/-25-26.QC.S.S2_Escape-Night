@@ -10,7 +10,10 @@ func _process(delta: float) -> void:
 
 func _input(event):
 	pass
-	
+	if event is InputEventMouseMotion:
+		var mouse_delta = event.relative
+		rotate_x(-event.relative.y * 0.1)
+		rotation.x = clamp(rotation.x, deg_to_rad(-80), deg_to_rad(80))
 	#if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		# Rotation horizontale (autour de Y)
 	#	rotation.y -= event.relative.x * sens_souris
@@ -32,6 +35,4 @@ func _unhandled_input(event):
 	if event.is_action_pressed("Cancel"): # "ui_cancel" est souvent la touche Échap
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	# Rere-capturer si on clique à nouveau (vous pourriez ajouter une logique)
-	if event is InputEventMouseMotion:
-		var mouse_delta = event.relative
-		rotate_x(-event.relative.y * 0.1)
+	

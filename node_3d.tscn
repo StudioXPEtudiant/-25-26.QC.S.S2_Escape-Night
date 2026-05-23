@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c3m58220ohf4b"]
 
-[ext_resource type="Script" uid="uid://dd8joq86u5u3m" path="res://script/personnage_principal.gd" id="1_rp3qt"]
-[ext_resource type="Script" uid="uid://h4ewu3wk3ej6" path="res://script/camera_3d.gd" id="2_jswb2"]
+[ext_resource type="Script" uid="uid://sj1chmjn51ke" path="res://script/personnage_principal.gd" id="1_rp3qt"]
+[ext_resource type="Script" uid="uid://b0ngugp4nki6f" path="res://script/camera_3d.gd" id="2_jswb2"]
 [ext_resource type="PackedScene" uid="uid://c0kvsgxmf8uis" path="res://Gun.tscn" id="3_a0tk4"]
 [ext_resource type="Script" uid="uid://b27184drb732q" path="res://script/Gun.gd" id="4_jka67"]
 [ext_resource type="Script" uid="uid://2as6gsdj1ap3" path="res://AmoIndicator.gd" id="5_jka67"]
@@ -14,26 +14,28 @@ size = Vector3(1, 2, 0.764)
 [node name="Player" type="CharacterBody3D" unique_id=1844134769]
 script = ExtResource("1_rp3qt")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2002355986]
-transform = Transform3D(0.247799, 0, 0, 0, 0.0184483, -0.255721, 0, 0.29653, 0.0159094, -0.408645, 0, -0.0883396)
-mesh = SubResource("CapsuleMesh_odvco")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1828937498]
-transform = Transform3D(0.247799, 0, 0, 0, 0.0184483, -0.255721, 0, 0.29653, 0.0159094, 0.274172, 0, -0.0883396)
-mesh = SubResource("CapsuleMesh_odvco")
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=367073077]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0425433, 0.284684, 0.2036)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0425433, 1.4967341, 0.2036)
 script = ExtResource("2_jswb2")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=52650882]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0425433, -0.220703, -0.0180113)
-shape = SubResource("BoxShape3D_ma6vh")
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Camera3D" unique_id=2002355986]
+transform = Transform3D(0.247799, 0, 0, 0, 0.0184483, -0.255721, 0, 0.29653, 0.0159094, -0.3661017, -0.28468394, -0.29193962)
+mesh = SubResource("CapsuleMesh_odvco")
+skeleton = NodePath("../..")
 
-[node name="Pistolet" parent="." unique_id=1654661297 instance=ExtResource("3_a0tk4")]
-transform = Transform3D(-1, 0, -1.79233e-07, 0, 1.67647, 0, 8.74228e-08, 0, -2.05019, 0.245476, 0.0688129, -0.352129)
+[node name="Pistolet" parent="Camera3D" unique_id=1654661297 instance=ExtResource("3_a0tk4")]
+transform = Transform3D(-1, 0, -1.79233e-07, 0, 1.67647, 0, 8.74228e-08, 0, -2.05019, 0.2880193, -0.2158711, -0.55572903)
 visible = false
 script = ExtResource("4_jka67")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=1828937498]
+transform = Transform3D(0.247799, 0, 0, 0, 0.0184483, -0.255721, 0, 0.29653, 0.0159094, 0.3167153, -0.28468394, -0.29193962)
+mesh = SubResource("CapsuleMesh_odvco")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=52650882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0425433, 0.9913472, -0.0180113)
+shape = SubResource("BoxShape3D_ma6vh")
 
 [node name="Label" type="Label" parent="." unique_id=641595559]
 offset_right = 40.0

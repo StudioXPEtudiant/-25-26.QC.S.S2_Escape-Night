@@ -1,3 +1,2 @@
-res://Laboratoir(scène).tscn
-res://script/script monstre Ami.gd
-res://script/Scipt monstre supécharger.gd
+res://node_3d.tscn
+res://script/camera_3d.gd
