@@ -1,1 +1,4 @@
 res://scenne/Labo v2.tscn
+res://node_3d.tscn
+res://script/camera_3d.gd
+res://script/personnage_principal.gd

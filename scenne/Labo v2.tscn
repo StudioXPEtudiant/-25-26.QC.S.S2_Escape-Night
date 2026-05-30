@@ -3,9 +3,15 @@
 [ext_resource type="Material" uid="uid://d07msuwoaenqk" path="res://coulleur/Difference rouge.tres" id="1_jjy2c"]
 [ext_resource type="Material" uid="uid://j6kos7l5iw2e" path="res://coulleur/Difference bleu.tres" id="2_ec1id"]
 [ext_resource type="Material" uid="uid://bq6cyweb3gqnl" path="res://coulleur/Difference verte.tres" id="3_r8d57"]
+[ext_resource type="PackedScene" uid="uid://c3m58220ohf4b" path="res://node_3d.tscn" id="4_opaxg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x7ysh"]
 albedo_color = Color(0.604023, 0.59712, 1.92523e-07, 1)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_dx8x5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dx8x5"]
+size = Vector3(22.884628, 0.578125, 36.531006)
 
 [node name="LABo v2" type="Node3D" unique_id=2074136687]
 
@@ -594,3 +600,15 @@ material = ExtResource("1_jjy2c")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9537, 8.86248, 21.0535)
 size = Vector3(9.24603, 0.163086, 8.99765)
 material = ExtResource("1_jjy2c")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=982148578]
+navigation_mesh = SubResource("NavigationMesh_dx8x5")
+
+[node name="Area3D" type="Area3D" parent="NavigationRegion3D" unique_id=1261046345]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Area3D" unique_id=2127980579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.086708, -0.2109375, 10.020874)
+shape = SubResource("BoxShape3D_dx8x5")
+
+[node name="Player" parent="NavigationRegion3D" unique_id=1844134769 instance=ExtResource("4_opaxg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1877823, 0, 2.5080228)

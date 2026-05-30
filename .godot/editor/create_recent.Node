@@ -1,7 +1,8 @@
 NavigationRegion3D
+CollisionShape3D
+Area3D
+MeshInstance3D
+RigidBody3D
 Node3D
 StaticBody3D
-RigidBody3D
-MeshInstance3D
-CollisionShape3D
 ShapeCast3D

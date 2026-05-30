@@ -61,11 +61,11 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-#func _input(event):
-	#var sens_souris: float = 1e-511
-	#if event is InputEventMouseMotion:
-		#var mouse_delta = event.relative
-		#rotate_y(-event.relative.x * 0.1)
+func _input(event):
+	var sens_souris: float = 1e-511
+	if event is InputEventMouseMotion:
+		var mouse_delta = event.relative
+		rotate_y(-event.relative.x * 0.1)
 
 
 func crouch():
