@@ -10,10 +10,9 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		var mouse_delta = event.relative
 		rotate_x(-event.relative.y * 0.1)
-		rotate_y(-event.relative.x * 0.1)
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		rotation.x = clamp(rotation.x, deg_to_rad(-60), deg_to_rad(60))
-		#rotation.y = clamp(rotation.y, deg_to_rad(-60), deg_to_rad(60))
+
 
 
 func _ready():
