@@ -1,3 +1,7 @@
+CSGMesh3D
+CSGTorus3D
+StaticBody3D
+RigidBody3D
 MeshInstance3D
 NavigationRegion3D
 CollisionShape3D

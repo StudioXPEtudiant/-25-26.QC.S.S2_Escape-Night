@@ -1,2 +1,12 @@
 res://scenne/Labo v2.tscn
 res://Plateforme_de_test.tscn
+res://node_3d.tscn
+res://script/camera_3d.gd
+res://script/Gun.gd
+res://script/personnage_principal.gd
+res://script/Scipt monstre supécharger.gd
+res://script/script monstre alarme.gd
+res://script/script monstre cameleon.gd
+res://script/script monstre statue V1.gd
+res://script/script montre répértitif.gd
+res://scenne/Labo v2.tscn
