@@ -14,6 +14,9 @@ albedo_color = Color(0.604023, 0.59712, 1.92523e-07, 1)
 size = Vector3(22.8846, 0.578125, 36.531)
 
 [node name="LABo v2" type="Node3D"]
+[sub_resource type="BoxMesh" id="BoxMesh_opaxg"]
+
+[node name="LABo v2" type="Node3D" unique_id=2074136687]
 
 [node name="Bâtiment" type="Node3D" parent="."]
 
@@ -1304,3 +1307,11 @@ shape = SubResource("BoxShape3D_dx8x5")
 
 [node name="Player" parent="NavigationRegion3D" instance=ExtResource("4_opaxg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.18778, 0, 2.50802)
+[node name="Player" parent="." unique_id=1844134769 instance=ExtResource("4_opaxg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1877823, 0, 2.5080228)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1605155900]
+transform = Transform3D(33.236385, 0, 0, 0, 1, 0, 0, 0, 63.675873, 0, -0.43434024, 0)
+mesh = SubResource("BoxMesh_opaxg")
+[node name="Player" parent="NavigationRegion3D" unique_id=1844134769 instance=ExtResource("4_opaxg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1877823, 0, 2.5080228)
