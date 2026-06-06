@@ -1,37 +1,37 @@
-63f7b34db8d8cdea90c76aacccf841ec
-::res://::1780166924
-AmoIndicator.gd::GDScript::1896247386803658586::1779561293::0::1::::<>Label<><>0<>0<><>::
-Gun.tscn::PackedScene::6549513788239822986::1779561293::0::1::::<><><>0<>0<><>::
-Labo V2(en cours).tscn::PackedScene::4321295930642574430::1779561293::0::1::::<><><>0<>0<><>::uid://d07msuwoaenqk::::res://coulleur/Difference rouge.tres<>uid://j6kos7l5iw2e::::res://coulleur/Difference bleu.tres<>uid://bq6cyweb3gqnl::::res://coulleur/Difference verte.tres
-Laboratoir(scène).tscn::PackedScene::4602546302195954410::1779568006::0::1::::<><><>0<>0<><>::uid://c7mj3q8t54x6n::::res://Monstre.tscn<>uid://c3m58220ohf4b::::res://node_3d.tscn<>uid://c0kvsgxmf8uis::::res://Gun.tscn
-Monstre.tscn::PackedScene::7044254244272869615::1779561293::0::1::::<><><>0<>0<><>::uid://ckfqsd6hcpijh::::res://script/monstreIA V1.1.gd<>uid://dwpg1ic6l2b7q::::res://script/navigation_agent_3d V1.1.gd
-node_3d.tscn::PackedScene::6764783424276730983::1779565889::0::1::::<><><>0<>0<><>::uid://sj1chmjn51ke::::res://script/personnage_principal.gd<>uid://b0ngugp4nki6f::::res://script/camera_3d.gd<>uid://c0kvsgxmf8uis::::res://Gun.tscn<>uid://b27184drb732q::::res://script/Gun.gd<>uid://2as6gsdj1ap3::::res://AmoIndicator.gd
-Satue of god.tscn::PackedScene::3359619218629956401::1779561293::0::1::::<><><>0<>0<><>::
-::res://Animation/::1779561293
-::res://coulleur/::1779561293
-Difference bleu.tres::StandardMaterial3D::696328469554742130::1779561293::0::1::::<><><>0<>0<><>::
-Difference rouge.tres::ORMMaterial3D::8980805063452480062::1779561293::0::1::::<><><>0<>0<><>::
-Difference verte.tres::StandardMaterial3D::3573603347092751125::1779561293::0::1::::<><><>0<>0<><>::
-::res://scenne/::1779561293
-Arms2.0.tscn::PackedScene::1807905853293210673::1779561293::0::1::::<><><>0<>0<><>::
-Labo V2(en cours).tscn::PackedScene::8495829270634106750::1779561293::0::1::::<><><>0<>0<><>::uid://d07msuwoaenqk::::res://coulleur/Difference rouge.tres<>uid://j6kos7l5iw2e::::res://coulleur/Difference bleu.tres<>uid://bq6cyweb3gqnl::::res://coulleur/Difference verte.tres
-Labo v2.tscn::PackedScene::3551925976810885444::1779561293::0::1::::<><><>0<>0<><>::uid://d07msuwoaenqk::::res://coulleur/Difference rouge.tres<>uid://j6kos7l5iw2e::::res://coulleur/Difference bleu.tres<>uid://bq6cyweb3gqnl::::res://coulleur/Difference verte.tres
-Laboratoir(scène).tscn::PackedScene::7541412120505744290::1779561293::0::1::::<><><>0<>0<><>::uid://dnwhrjxakhhu6::::res://scenne/Monstre.tscn<>uid://cbpimu6tuyoqh::::res://scenne/node_3d.tscn
-Monstre.tscn::PackedScene::8117589214663087867::1779561293::0::1::::<><><>0<>0<><>::uid://ckfqsd6hcpijh::::res://script/monstreIA V1.1.gd<>uid://dwpg1ic6l2b7q::::res://script/navigation_agent_3d V1.1.gd
-node_3d.tscn::PackedScene::4874504142051021183::1779561293::0::1::::<><><>0<>0<><>::uid://dd8joq86u5u3m::::res://script/personnage_principal.gd<>uid://h4ewu3wk3ej6::::res://script/camera_3d.gd
-Player.tscn::PackedScene::4388438467382249210::1779561293::0::1::::<><><>0<>0<><>::
-::res://script/::1779565393
-amo_indicator.gd::GDScript::4677077605550069017::1779561293::0::1::::<>TextEdit<><>0<>0<><>::
-camera_3d.gd::GDScript::4168379042928954563::1779565393::0::1::::<>Camera3D<><>0<>0<><>::
-Gun.gd::GDScript::4349218651647274886::1779561293::0::1::::<>Node3D<><>0<>0<><>::
-monstreIA V1.1.gd::GDScript::5486055514491683473::1779561293::0::1::::<>CharacterBody3D<><>0<>0<><>::
-navigation_agent_3d V1.1.gd::GDScript::8734793434725709628::1779561293::0::1::::<>NavigationAgent3D<><>0<>0<><>::
-personnage_principal.gd::GDScript::1283561185299463456::1779562294::0::1::::<>CharacterBody3D<><>0<>0<><>::
-Pistolet.gd::GDScript::4621636618911168638::1779561293::0::1::::<>Node3D<><>0<>0<><>::
-Scipt monstre supécharger.gd::GDScript::7246678871412653292::1779561293::0::1::::<>CharacterBody3D<><>0<>0<><>::
-script monstre alarme.gd::GDScript::4941186923421677401::1779561293::0::1::::<>CharacterBody3D<><>0<>0<><>::
-script monstre Ami.gd::GDScript::3797135476383437089::1779561293::0::1::::<>CharacterBody3D<><>0<>0<><>::
-script monstre cameleon.gd::GDScript::8811725279444979914::1779561293::0::1::::<>CharacterBody3D<><>0<>0<><>::
-Script monstre Sensible.gd::GDScript::4840023188529657946::1779561293::0::1::::<>CharacterBody3D<><>0<>0<><>::
-script monstre statue V1.gd::GDScript::3928029862658031284::1779561293::0::1::::<>CharacterBody3D<><>0<>0<><>::
-script montre répértitif.gd::GDScript::3833347882937417660::1779561293::0::1::::<>CharacterBody3D<><>0<>0<><>::
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1780772094
+AmoIndicator.gd::GDScript::1896247386803658586::1780166396::0::1::::<>Label<><>0<>0<><>::
+Gun.tscn::PackedScene::6549513788239822986::1780166396::0::1::::<><><>0<>0<><>::
+Labo V2(en cours).tscn::PackedScene::4321295930642574430::1775936854::0::1::::<><><>0<>0<><>::uid://d07msuwoaenqk::::res://coulleur/Difference rouge.tres<>uid://j6kos7l5iw2e::::res://coulleur/Difference bleu.tres<>uid://bq6cyweb3gqnl::::res://coulleur/Difference verte.tres
+Laboratoir(scène).tscn::PackedScene::4602546302195954410::1780173764::0::1::::<><><>0<>0<><>::uid://c7mj3q8t54x6n::::res://Monstre.tscn<>uid://c3m58220ohf4b::::res://node_3d.tscn<>uid://c0kvsgxmf8uis::::res://Gun.tscn
+Monstre.tscn::PackedScene::7044254244272869615::1780166396::0::1::::<><><>0<>0<><>::uid://ckfqsd6hcpijh::::res://script/monstreIA V1.1.gd<>uid://dwpg1ic6l2b7q::::res://script/navigation_agent_3d V1.1.gd
+node_3d.tscn::PackedScene::6764783424276730983::1780166396::0::1::::<><><>0<>0<><>::uid://sj1chmjn51ke::::res://script/personnage_principal.gd<>uid://b0ngugp4nki6f::::res://script/camera_3d.gd<>uid://c0kvsgxmf8uis::::res://Gun.tscn<>uid://b27184drb732q::::res://script/Gun.gd<>uid://2as6gsdj1ap3::::res://AmoIndicator.gd
+Satue of god.tscn::PackedScene::3359619218629956401::1772316605::0::1::::<><><>0<>0<><>::
+::res://Animation/::1780166396
+::res://coulleur/::1774726453
+Difference bleu.tres::StandardMaterial3D::696328469554742130::1774726453::0::1::::<><><>0<>0<><>::
+Difference rouge.tres::ORMMaterial3D::8980805063452480062::1774726453::0::1::::<><><>0<>0<><>::
+Difference verte.tres::StandardMaterial3D::3573603347092751125::1774726453::0::1::::<><><>0<>0<><>::
+::res://scenne/::1780173764
+Arms2.0.tscn::PackedScene::1807905853293210673::1774726453::0::1::::<><><>0<>0<><>::
+Labo V2(en cours).tscn::PackedScene::8495829270634106750::1774726453::0::1::::<><><>0<>0<><>::uid://d07msuwoaenqk::::res://coulleur/Difference rouge.tres<>uid://j6kos7l5iw2e::::res://coulleur/Difference bleu.tres<>uid://bq6cyweb3gqnl::::res://coulleur/Difference verte.tres
+Labo v2.tscn::PackedScene::3551925976810885444::1780173806::0::1::::<><><>0<>0<><>::uid://d07msuwoaenqk::::res://coulleur/Difference rouge.tres<>uid://j6kos7l5iw2e::::res://coulleur/Difference bleu.tres<>uid://bq6cyweb3gqnl::::res://coulleur/Difference verte.tres<>uid://c3m58220ohf4b::::res://node_3d.tscn
+Laboratoir(scène).tscn::PackedScene::7541412120505744290::1775936854::0::1::::<><><>0<>0<><>::uid://dnwhrjxakhhu6::::res://scenne/Monstre.tscn<>uid://cbpimu6tuyoqh::::res://scenne/node_3d.tscn
+Monstre.tscn::PackedScene::8117589214663087867::1780166396::0::1::::<><><>0<>0<><>::uid://ckfqsd6hcpijh::::res://script/monstreIA V1.1.gd<>uid://dwpg1ic6l2b7q::::res://script/navigation_agent_3d V1.1.gd
+node_3d.tscn::PackedScene::4874504142051021183::1774726453::0::1::::<><><>0<>0<><>::uid://dd8joq86u5u3m::::res://script/personnage_principal.gd<>uid://h4ewu3wk3ej6::::res://script/camera_3d.gd
+Player.tscn::PackedScene::4388438467382249210::1780166396::0::1::::<><><>0<>0<><>::
+::res://script/::1780173764
+amo_indicator.gd::GDScript::4677077605550069017::1780166396::0::1::::<>TextEdit<><>0<>0<><>::
+camera_3d.gd::GDScript::4168379042928954563::1780173764::0::1::::<>Camera3D<><>0<>0<><>::
+Gun.gd::GDScript::4349218651647274886::1780166396::0::1::::<>Node3D<><>0<>0<><>::
+monstreIA V1.1.gd::GDScript::5486055514491683473::1780166396::0::1::::<>CharacterBody3D<><>0<>0<><>::
+navigation_agent_3d V1.1.gd::GDScript::8734793434725709628::1771708436::0::1::::<>NavigationAgent3D<><>0<>0<><>::
+personnage_principal.gd::GDScript::1283561185299463456::1780173764::0::1::::<>CharacterBody3D<><>0<>0<><>::
+Pistolet.gd::GDScript::4621636618911168638::1780166396::0::1::::<>Node3D<><>0<>0<><>::
+Scipt monstre supécharger.gd::GDScript::7246678871412653292::1780166396::0::1::::<>CharacterBody3D<><>0<>0<><>::
+script monstre alarme.gd::GDScript::4941186923421677401::1780166396::0::1::::<>CharacterBody3D<><>0<>0<><>::
+script monstre Ami.gd::GDScript::3797135476383437089::1780166396::0::1::::<>CharacterBody3D<><>0<>0<><>::
+script monstre cameleon.gd::GDScript::8811725279444979914::1780166396::0::1::::<>CharacterBody3D<><>0<>0<><>::
+Script monstre Sensible.gd::GDScript::4840023188529657946::1780166396::0::1::::<>CharacterBody3D<><>0<>0<><>::
+script monstre statue V1.gd::GDScript::3928029862658031284::1780166396::0::1::::<>CharacterBody3D<><>0<>0<><>::
+script montre répértitif.gd::GDScript::3833347882937417660::1780166396::0::1::::<>CharacterBody3D<><>0<>0<><>::
